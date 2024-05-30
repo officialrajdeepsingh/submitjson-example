@@ -22,9 +22,7 @@ export const formSchema = z.object({
     message: "Phone number is short."
   }).max(10,{
       message: "Phone number is big."
-  }).refine((phone) => {
-    return isMobilePhone(phone)
-  },{
+  }).refine((phone) => isMobilePhone(phone),{
     message: "Enter vaild mobile number"
   }),
   message: z.string({message: "Enter message"}).min(12, {
@@ -34,19 +32,3 @@ export const formSchema = z.object({
     message: "Select a service"
   })
 })
-
-/*
-* phoneNumber: z.number{
-    message: "Enter mobile number"
-  }).min(10,{
-    message: "Phone number is  short."
-  }).max(10,{
-      message: "Phone number is big."
-  }).refine(validator.isMobilePhone,{
-    message: "Enter vaild mobile number"
-  }),
-
-*
-*
-*
-* */
