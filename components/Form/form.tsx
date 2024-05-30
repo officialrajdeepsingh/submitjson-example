@@ -14,7 +14,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
+import { useFormStatus } from "react-dom";
 import { Input } from "@/components/ui/input"
 import { formSchema } from "./schema"
 import { Textarea } from "@/components/ui/textarea";
@@ -44,11 +44,6 @@ export function ContactForm() {
       },
       body: JSON.stringify(values),
     }).then(async (response) => {
-
-
-      console.log(" submit is here :", values)
-      // let result = await response.json()
-
       if (response.status !== 200 && !response.ok) throw new Error();
       toast.success("Your form is submit successfully.")
     })
