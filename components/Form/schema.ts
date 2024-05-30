@@ -19,11 +19,10 @@ export const formSchema = z.object({
   phoneNumber: z.string({
     message: "Enter mobile number"
   }).min(10,{
-    message: "Phone number is  short."
+    message: "Phone number is short."
   }).max(10,{
       message: "Phone number is big."
   }).refine((phone) => {
-    console.log(phone, " verify number is here :", isMobilePhone(phone))
     return isMobilePhone(phone)
   },{
     message: "Enter vaild mobile number"
