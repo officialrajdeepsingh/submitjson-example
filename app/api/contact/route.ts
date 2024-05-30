@@ -3,7 +3,7 @@ import SubmitJSON from 'submitjson'
 
 const sj = new SubmitJSON({
   apiKey: process.env.SUBMIT_JSON_API_KEY as string,
-  endpoint: 'WOOpcMfdI'
+  endpoint: process.env.ENDPOINT
 })
 
 export async function POST(request: NextRequest) {
