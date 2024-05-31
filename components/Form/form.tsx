@@ -45,6 +45,7 @@ export function ContactForm() {
     }).then(async (response) => {
       if (response.status !== 200 && !response.ok) throw new Error();
       toast.success("Your form is submit successfully.")
+      form.reset()
     })
       .catch(() => {
         toast.error('Something wrong error')
