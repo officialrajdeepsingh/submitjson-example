@@ -5,19 +5,19 @@
 First, clone the project with git.
 
 ```bash
-git clone https://github.com/officialrajdeepsingh/contact-form-with-action.git
+git clone https://github.com/officialrajdeepsingh/submitjson-example
 # or
-gh repo clone officialrajdeepsingh/contact-form-with-action
+gh repo clone officialrajdeepsingh/submitjson-example
 ```
 
-Install the node package in React Re-render:
+Before running local development, define your environment variable key and endpoint for submitjson.
 
 ```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
+
+# .env.local
+
+SUBMIT_JSON_API_KEY=sjk_139fab252f684f2eb49adbd51b23317e
+ENDPOINT= WOOpcMfdI
 ```
 
 Run your development server:
